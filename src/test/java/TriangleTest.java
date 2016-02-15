@@ -46,4 +46,11 @@ public class TriangleTest {
     Triangle testTriangle = new Triangle(2,3,4);
     assertEquals(true, testTriangle.isScalene());
   }
+
+  @Test
+  public void isTriangle_sidesNotLegitimate_false() {
+    Triangle testTriangle = new Triangle(1,2,4);
+    assertEquals(false, testTriangle.isTriangle());
+  }
+
 }

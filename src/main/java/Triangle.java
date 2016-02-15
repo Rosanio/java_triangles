@@ -30,6 +30,10 @@ public class Triangle {
     return mSide3;
   }
 
+  public boolean isTriangle() {
+    return !(mSide1+mSide2 < mSide3 || mSide1+mSide3 < mSide2 || mSide3+mSide2 < mSide1);
+  }
+
   public boolean isEquilateral() {
     return mSide1 == mSide2 && mSide1 == mSide3;
   }
