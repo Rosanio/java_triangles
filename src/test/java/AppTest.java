@@ -23,6 +23,16 @@ public class AppTest extends FluentTest {
   @Test
   public void rootTest() {
       goTo("http://localhost:4567/");
-      assertThat(pageSource()).contains("");
+      assertThat(pageSource()).contains("Triangle Detector");
+  }
+
+  @Test
+  public void fillTest() {
+    goTo("http://localhost:4567/");
+    fill("#side1").with("3");
+    fill("#side2").with("3");
+    fill("#side3").with("3");
+    submit(".btn");
+    assertThat(pageSource()).contains("Equilateral");
   }
 }
