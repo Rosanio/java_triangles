@@ -30,8 +30,20 @@ public class TriangleTest {
   }
 
   @Test
-  public void isEqualateral_allSidesEqual_true() {
+  public void isEquilateral_allSidesEqual_true() {
     Triangle testTriangle = new Triangle(3,3,3);
-    assertEquals(true, testTriangle.isEqualateral());
+    assertEquals(true, testTriangle.isEquilateral());
+  }
+
+  @Test
+  public void isIsosceles_twoSidesEqual_true() {
+    Triangle testTriangle = new Triangle(2,3,3);
+    assertEquals(true, testTriangle.isIsosceles());
+  }
+
+  @Test
+  public void isScalene_noSidesEqual_true() {
+    Triangle testTriangle = new Triangle(2,3,4);
+    assertEquals(true, testTriangle.isScalene());
   }
 }

@@ -30,9 +30,16 @@ public class Triangle {
     return mSide3;
   }
 
-  public boolean isEqualateral() {
+  public boolean isEquilateral() {
     return mSide1 == mSide2 && mSide1 == mSide3;
   }
 
-  public boolean
+  public boolean isIsosceles () {
+    return mSide1 == mSide2 || mSide1 == mSide3 || mSide2 == mSide3;
+  }
+
+  public boolean isScalene () {
+    return mSide1 != mSide2 && mSide2 != mSide3 && mSide1 != mSide3;
+  }
+
 }
