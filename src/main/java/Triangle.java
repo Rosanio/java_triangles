@@ -17,4 +17,22 @@ public class Triangle {
     mSide2 = side2;
     mSide3 = side3;
   }
+
+  public int getSide1() {
+    return mSide1;
+  }
+
+  public int getSide2() {
+    return mSide2;
+  }
+
+  public int getSide3() {
+    return mSide3;
+  }
+
+  public boolean isEqualateral() {
+    return mSide1 == mSide2 && mSide1 == mSide3;
+  }
+
+  public boolean
 }
